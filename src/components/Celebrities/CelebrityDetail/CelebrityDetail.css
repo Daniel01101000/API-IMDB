@@ -1,0 +1,228 @@
+.celebrity-dates-image {
+  margin-left: 7vw;
+}
+
+.celebrity-detail {
+  padding: 20px;
+  color: #fff;
+  
+}
+
+.celebrity-main-photo {
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.celebrity-movies {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+.celebrity-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.celebrity-gallery-photo {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.celebrity-gallery-photo:hover {
+  filter: brightness(70%);
+  transform: scale(1.05);
+}
+
+.celebrity-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 150px; /* Altura base de las filas */
+  gap: 10px;
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.celebrity-gallery-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.celebrity-gallery-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Hacer que algunas imágenes ocupen más espacio */
+.celebrity-gallery-photo.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.celebrity-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-auto-rows: 150px; /* altura base */
+  gap: 8px;
+  width: 100%;
+  max-width: 1000px;
+  height: 400px; /* altura fija para hacerlo rectangular */
+  overflow: hidden; /* recorta el contenido que sobresalga */
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.celebrity-gallery-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* rellena el rectángulo sin deformarse */
+  border-radius: 6px;
+  transition: transform 0.3s ease;
+}
+
+.celebrity-gallery-photo:hover {
+  transform: scale(1.05);
+}
+
+/* Hacer que algunas imágenes sean más grandes */
+.celebrity-gallery-photo.big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;  /* ocupa toda la altura de la pantalla */
+  width: 100%;
+  background-color: #000; /* opcional, si quieres fondo oscuro */
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #333;        /* color oscuro para contraste */
+  border-top: 4px solid #f5c518; /* amarillo IMDb */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.celebrity-years {
+  color: #FFFFFFB3; /* gris */
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-left: 8px;
+  font-family: Roboto, Helvetica;
+}
+
+.h2-known {
+  font-size: 2rem;
+  margin: 40px 0; /* 40px arriba y abajo */
+  margin-left: 7vw;
+}
+
+.l-yellow {
+  position: relative;
+  margin: 15px;
+  color: #f5c518;
+  font-size: 2rem;
+}
+
+/* ===== HEADER LAYOUT ===== */
+
+.celebrity-title {
+  margin-left: 7vw;
+  margin-bottom: 30px;
+}
+
+.celebrity-header {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin-left: 7vw;
+  margin-bottom: 40px;
+}
+
+.celebrity-main-photo {
+  border-radius: 10px;
+  width: 300px;
+  height: auto;
+}
+
+.celebrity-info {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  max-width: 600px;
+  font-size: 1.1rem;
+  color: #FFFFFFB3; /* MISMO COLOR que celebrity-years */
+}
+
+/* etiqueta en blanco fuerte */
+.info-label {
+  color: #fff;
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+/* mismo color gris */
+.celebrity-years {
+  color: #FFFFFFB3;
+  font-size: 1.6rem;
+  font-weight: normal;
+  margin-left: 8px;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 900px) {
+  .celebrity-header {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  .celebrity-title {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .celebrity-info {
+    text-align: center;
+  }
+}
+
+.celebrity-no-photo {
+  width: 300px;
+  height: 450px; /* proporción similar a w300 */
+  background-color: #333333;
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}

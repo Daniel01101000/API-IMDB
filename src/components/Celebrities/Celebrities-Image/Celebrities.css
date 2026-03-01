@@ -1,0 +1,70 @@
+.celebrities-section {
+  width: 80vw;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.section-title-celebrities {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.celebrities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 82px;
+  justify-items: center;
+}
+
+.celebrity-card {
+  text-align: center;
+}
+
+.celebrity-photo {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover; /* Mantiene proporción sin deformar */
+}
+
+.celebrity-name {
+  margin-top: 10px;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.no-photo {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background-color: #333;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.celebrity-card {
+  text-align: center;
+  cursor: pointer; /* hace el puntero al pasar el mouse */
+  position: relative;
+}
+
+.celebrity-photo {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.celebrity-card:hover .celebrity-photo {
+  filter: brightness(50%); /* oscurece la imagen al pasar el mouse */
+}
+
+@media (max-width: 530px) {
+  .section-title-celebrities {
+    color: #121212;
+  }
+}

@@ -1,0 +1,137 @@
+/* Header.css */
+.header-container {
+  position: relative; /* necesario para centrar la search bar */
+  display: flex;
+  align-items: center;
+  background-color: #121212;
+  padding: 10px 20px;
+  border-bottom: 2px solid #f5c518;
+  z-index: 999;
+}
+
+/* Logo a la izquierda */
+.header-logo {
+  height: 40px;
+  width: auto;
+  margin-right: 15px;
+}
+
+/* Título opcional */
+.header-title {
+  color: #f5c518;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 15px;
+}
+
+/* Contenedor de la barra de búsqueda centrada */
+.search-wrapper {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+}
+
+/* SearchBar */
+.search-bar {
+  display: flex;
+  gap: 5px;
+}
+
+.search-input {
+  padding: 8px 12px;
+  font-size: 16px;
+  border: 1px solid #f5c518;
+  border-radius: 4px;
+  outline: none;
+  width: 250px;
+  max-width: 80vw; /* responsive en pantallas pequeñas */
+}
+
+.search-button {
+  background-color: #f5c518;
+  color: black;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-color: #e5b50f;
+}
+
+@media (max-width: 1080px) {
+  .header-title {
+    display: none;
+  }
+}
+
+@media (max-width: 830px) {
+  .header-container {
+    justify-content: space-between;
+  }
+
+  .header-logo {
+    order: 3; /* Lo manda al final (derecha) */
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 630px) {
+  .search-input {
+    width: 160px;   /* antes era 250px */
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  .search-button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 530px) {
+
+  /* Ocultar logo IMDb */
+  .header-logo {
+    display: none;
+  }
+
+  /* Mandar el menú hamburguesa a la derecha */
+  .header-container {
+    justify-content: space-between;
+  }
+
+  /* Esto mueve el Menu al final */
+  .header-container > :first-child {
+    order: 3;
+    margin-left: auto;
+  }
+  
+  .header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  background-color: #121212;
+  padding: 20px 20px;
+  border-bottom: 2px solid #f5c518;
+  z-index: 999;
+}
+}
+
+@media (max-width: 470px) {
+  .search-button {
+    display: none;
+  }
+
+  .header-menu {
+    margin-right: -10px; /* lo empuja un poco más a la derecha */
+  }
+}

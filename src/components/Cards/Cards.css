@@ -1,0 +1,175 @@
+/* =========================
+   GRID RESPONSIVE
+========================= */
+
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  width: 90%;
+  max-width: 1400px;
+  margin: 40px auto;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.movie-card {
+  position: relative;
+  border-radius: 12px;
+  background-color: #1c1c1c;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+/* =========================
+   POSTER
+========================= */
+
+.movie-poster {
+  width: 100%;
+  height: 390px;
+  object-fit: cover;
+  border-bottom: 1px solid #333;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.movie-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.movie-title {
+  font-size: 1rem;
+  margin-bottom: 8px;
+  min-height: 40px;
+}
+
+.movie-rating {
+  display: inline-block;
+  background-color: #f5c518;
+  color: black;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+/* =========================
+   TRAILER BUTTON
+========================= */
+
+.trailer-button {
+  margin: 15px;
+  text-align: center;
+}
+
+.trailer-button a {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.95rem;
+  color: #f5c518;
+  text-decoration: none;
+  padding: 6px 12px;
+  border: 1px solid #f5c518;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.trailer-button a:hover {
+  transform: scale(1.05);
+  background-color: #f5c518;
+  color: black;
+}
+
+/* =========================
+   NO IMAGE
+========================= */
+
+.no-image {
+  width: 100%;
+  height: 390px;
+  background-color: #333;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+/* =========================
+   RIBBON
+========================= */
+
+.movie-ribbon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.85);
+  color: #fff;
+  padding: 8px 12px;
+  font-size: 1.2rem;
+  z-index: 2;
+  transition: background 0.2s ease;
+}
+
+.movie-ribbon::after,
+.movie-ribbon::before {
+  content: "";
+  position: absolute;
+  bottom: -21px;
+  width: 0;
+  height: 0;
+}
+
+.movie-ribbon::after {
+  left: 0;
+  border-right: 24px solid transparent;
+  border-top: 21px solid rgba(0, 0, 0, 0.85);
+}
+
+.movie-ribbon::before {
+  left: 24px;
+  border-left: 24px solid transparent;
+  border-top: 21px solid rgba(0, 0, 0, 0.85);
+}
+
+.movie-ribbon.active {
+  background: #f5c518;
+  color: black;
+}
+
+.movie-ribbon.active::after {
+  border-top: 21px solid #f5c518;
+}
+
+.movie-ribbon.active::before {
+  border-top: 21px solid #f5c518;
+}
+
+/* =========================
+   MOBILE ADJUSTMENTS
+========================= */
+
+@media (max-width: 480px) {
+  .movie-poster,
+  .no-image {
+    height: 340px;
+  }
+
+  .movie-title {
+    font-size: 0.95rem;
+  }
+}
