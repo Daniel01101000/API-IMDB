@@ -1,12 +1,46 @@
-# React + Vite
+# ApiIMDb
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![React](https://img.shields.io/badge/React-20232A?logo=react)
+![Node.js](https://img.shields.io/badge/Node.js-339933?logo=node.js)
+![Express](https://img.shields.io/badge/Express-000000?logo=express)
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+ApiMovies is a full-stack web application that allows users to explore movie information from an external API.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Browse movies
+- Search movies
+- View detailed information
+- Responsive design
+- API integration
+
+## Tech Stack
+
+| Frontend | Backend | Tools |
+|-----------|-----------|-----------|
+| React | Node.js | Git |
+| JavaScript | Express | GitHub |
+| HTML | | |
+| CSS | | |
+
+## Installation
+
+```bash
+git clone https://github.com/yourusername/ApiMovies.git
+cd ApiMovies
+npm install
+npm run dev
+```
+
+## Lessons Learned
+
+- API consumption
+- React state management
+- Full-stack architecture
+- Responsive design
+  
+## Author
+
+Daniel Charles
